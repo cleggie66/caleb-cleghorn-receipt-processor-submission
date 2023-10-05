@@ -17,7 +17,7 @@ const receiptValidation = ({ retailer, purchaseDate, purchaseTime, items, total 
 
     if (Number(total) < 0 ) return false;
 
-    return true
+    return true;
 }
 
 module.exports = receiptValidation;

@@ -69,10 +69,12 @@ const pointCalculator = ({ retailer, purchaseDate, purchaseTime, items, total })
 
 // Helper function to process receipt
 const receiptEntry = (receipt) => {
+
     const points = pointCalculator(receipt);
     const id = uuidv4();
     receiptData[id] = points;
     return id;
+    
 };
 
 
