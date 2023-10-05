@@ -5,7 +5,7 @@
 
 
 ## About
-I'm [Caleb!](https://www.linkedin.com/in/caleb-cleghorn-31843b189/) A Chicago-based software engineer, and this is my submission for Fetch Rewards's Backend Engineering Apprenticeship position! I used a Express application to handle API requests, some custom JavaScript to handle receipt processing, and Docker to tie everything together. I had a ton of fun with this assignment and look forward to continuing this process with Fetch!
+Hi, I'm [Caleb!](https://www.linkedin.com/in/caleb-cleghorn-31843b189/) A Chicago-based software engineer interested in the Backend Engineering Apprenticeship at Fetch Rewards! For this take home exercise, I used an Express application to handle API requests, some custom JavaScript to handle receipt processing, and Docker to tie everything together. I had a ton of fun with this assignment and look forward to continuing this process with Fetch!
 
 ## Technologies Used:
 
