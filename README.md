@@ -1,4 +1,4 @@
-# Caleb Cleghorn's Fetch Submission
+# CC — Fetch Rewards Take Home Exercise
 
 <img src="https://github.com/cleggie66/caleb-cleghorn-receipt-processor-submission/assets/117665526/fd7903e9-1afb-4a3c-9d95-82ef1f61b488" align="left"
      alt="Fetch Logo" height="180">
