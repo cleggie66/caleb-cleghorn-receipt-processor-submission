@@ -67,6 +67,7 @@ const pointCalculator = ({ retailer, purchaseDate, purchaseTime, items, total })
     return points;
 }
 
+// Helper function to process receipt
 const receiptEntry = (receipt) => {
     const points = pointCalculator(receipt);
     const id = uuidv4();
@@ -83,7 +84,7 @@ app.post('/receipts/process', function (req, res) {
 
     // Simple receipt data validation
     if (!receiptValidation(receipt)) {
-        return res.json("Receipt not valid")
+        return res.json("Receipt data is invalid")
     }
 
     // Processes receipt and returns id
