@@ -74,7 +74,7 @@ const receiptEntry = (receipt) => {
     const id = uuidv4();
     receiptData[id] = points;
     return id;
-    
+
 };
 
 
@@ -118,5 +118,5 @@ app.get('/receipts/:id/points', function (req, res) {
 });
 
 // Configures port
-const port = 3000;
+const port = 5000;
 app.listen(port, () => console.log('Server is listening on port', port));
