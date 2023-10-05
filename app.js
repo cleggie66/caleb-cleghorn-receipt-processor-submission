@@ -1,7 +1,7 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const validate = require('uuid-validate');
-
+const receiptValidation = require('./validators/receiptValidation');
 
 // Configures express application
 const app = express();
@@ -9,8 +9,8 @@ const app = express();
 // Parses through the body of the request automatically
 app.use(express.json());
 
+// Initialize object for temporary memory
 const receiptData = {};
-
 
 // Helper function to return boolean for valid/invalid UUID
 const idValidator = (id) => {
@@ -79,18 +79,23 @@ const receiptEntry = (receipt) => {
 
 app.post('/receipts/process', function (req, res) {
 
-    console.log(receiptData)
-
     const receipt = req.body;
+
+    // Simple receipt data validation
+    if (!receiptValidation(receipt)) {
+        return res.json("Receipt not valid")
+    }
 
     // Processes receipt and returns id
     const id = receiptEntry(receipt);
 
     res.json({ "id": id });
+
 });
 
 
 app.get('/receipts/:id/points', function (req, res) {
+
     const id = req.params.id;
 
     // Checks for valid ID
@@ -106,8 +111,9 @@ app.get('/receipts/:id/points', function (req, res) {
     const points = receiptData[id];
 
     res.json({ "points": points });
+
 });
 
 // Configures port
-const port = 5000;
+const port = 3000;
 app.listen(port, () => console.log('Server is listening on port', port));
