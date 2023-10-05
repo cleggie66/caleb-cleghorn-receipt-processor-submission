@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "caleb-cleghorn-submission",
   "version": "1.0.0",
-  "description": "",
+  "description": "If you're reading this, I hope you've liked my code!",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
